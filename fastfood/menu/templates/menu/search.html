@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<div class="row row-cols-1 row-cols-md-4 g-4">
+   {% for items in items_list %}
+
+          {% include 'items_card.html' with object=items %}
+
+    {% endfor%}
+</div>
+
+{% endblock %}

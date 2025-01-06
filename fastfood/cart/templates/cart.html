@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+
+{% load custom_filters%}
+
+{% block content %}
+ <div class="row row-cols-1 row-cols-md-2 g-4">
+  {% for cartitem in cartitems%}
+    <div class="col"style="max-width:350px;">
+        <div class="card mb-3">
+            <img src="{{cartitem.productref.product_picture.url}}" class="card-img-top" alt="..">
+            <div class="card-body">
+              <h5 class="card-title">{{ cartitem.productref.product_name}}</h5>
+                {% comment %} <h5 class="card-title">{{cartitem.quantity}}</h5> {% endcomment %}
+                <h5 class="card-title">₹ {{cartitem.productref.product_price}}</h5>
+            </div>
+
+            <form action="{% url 'update-quantity' cartitem.id %}">
+              <button type="button" class=" btn-sm btn-custom" onclick="updateQuantity(-1, {{cartitem.id}})"> - </button>
+
+              {% comment %} <button type="button" onclick="updateQuantity(-1,{{cartitem.id}})"> - </button> {% endcomment %}
+              <input type="number" name="quantity" class=" btn-sm btn-custom" id="quantity{{cartitem.id}}" value={{cartitem.quantity}}>
+              <button type="button" class=" btn-sm btn-custom" onclick="updateQuantity(+1,{{cartitem.id}})"> + </button>
+              {% comment %} <button type="submit">Update</button> {% endcomment %}
+              <button type="submit" class="btn btn-warning btn-sm" style="width: 100px hight:5px;">Update</button>
+
+            </form>
+            
+            {% comment %} <a class="btn btn-danger" href="{% url 'remove-from-cart' cartitem.id %}" role="button">Remove</a> {% endcomment %}
+            <a class="btn btn-danger btn-sm" href="{% url 'remove-from-cart' cartitem.id %}" role="button" style="width:130px;">Remove</a>
+
+            
+        </div>
+    </div>
+    {% endfor %}
+    
+</div> 
+<br>
+<br>
+
+<table class="table table-striped table-dark">
+  <thead>
+    <tr>
+      <th scope="col">ProductName</th>
+      <th scope="col">Price</th>
+      <th scope="col">Quantity</th>
+      <th scope="col">Total</th>
+    </tr>
+    {% for cartitem in cartitems%}
+    <tr>
+      <td>{{ cartitem.productref.product_name}}</td>
+      <td>{{cartitem.productref.product_price}}</td>
+      <td>{{cartitem.quantity}}</td>
+      {% comment %} <td>{{cartitem.quantity|multiply:cartitem.productref.product_price}}</td> {% endcomment %}
+      <td>{{ cartitem.quantity|multiply:cartitem.productref.product_price }}</td>
+
+    </tr>
+
+   
+    {% endfor%}
+    {% comment %} <a href="{% url 'payment' total %}"><button type="submit"class="btn btn-warning">Checkout</button></a> {% endcomment %}
+   
+  </thead>
+</table>
+
+<h1  class="p-3 mb-2 bg-info text-white">Total Amount ={{total}}</h1>
+<a href="{% url 'payment' total %}"><button type="submit"class="btn btn-warning">Checkout</button></a>
+
+
+
+{% endblock %}

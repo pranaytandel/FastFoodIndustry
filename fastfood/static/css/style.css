@@ -1,0 +1,198 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+}
+.navbar{
+    background-color: #FBFFDC;
+  
+}
+.navbar-brand{
+    font-size:20px;
+    color: black;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.navbar-brand:hover{
+    color: black;
+}
+.nav-link {
+    margin-right: 5px;
+    margin-left:5px;
+    color: black;
+ 
+    text-transform: uppercase;
+}
+.nav-link:hover {
+    color:black;
+}
+.search{
+    height: 20px;
+    width: 50px;
+    border-radius:60px;
+    outline: none;
+    margin-right: -35px;
+    border: 2px solid #9BCF53;
+}
+/* ======= */
+
+/* === */
+.btn0{
+    height: 40px;
+    width: 40%;
+    outline: none;
+    border: none;
+    background: #9BCF53; ;
+    color: white;
+    font-weight: 700;
+}
+
+/*==================================================*/
+.main{
+    background-size: cover;
+    height: 100vh;
+    background-position: 50% 50%;
+    width: 100%s;
+}
+.main h1{
+    font-size: 4rem;
+    font-weight: 700;
+    color: whitesmoke;
+    
+}
+
+.main h3{
+    color: whitesmoke;
+}
+
+.btn1{
+    height: 45px;
+    width: 35%;
+    border: none;
+    outline: none;
+    background-color: #9BCF53;
+    color: white;
+    font-weight: 700;
+    border-radius: 60px;
+}
+.btn1:hover{
+    background-color:#b0f18a;
+    transition: 0.5s;
+}
+
+.card:hover{
+    box-shadow: -2px -1px 25px -2px rgba(0,0,0,0.75);
+-moz-box-shadow: -2px -1px 25px -2px rgba(0,0,0,0.75);
+box-shadow: -2px -1px 25px -2px rgba(0,0,0,0.75);
+
+}
+/*=============================*/
+.news{
+    background-color: black;
+    color: white;
+}
+
+.btn2{
+    height: 45px;
+    width: 100px;
+    background: white;
+    border: 2px solid white;
+    font-weight: 600;
+
+}
+.btn {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.bordered {
+    border: 2px solid #333;
+    display: inline-block; /* Ensure the border wraps around the button */
+}
+
+.mx-1 {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.news input{
+    height: 45px;
+    width: 55%;
+    border: 2px solid white;
+    outline: none;
+    background: black;
+    color: white;
+    margin-top:20px;
+    font-weight: 600;
+
+}
+.news::placeholder{
+    color: white;
+}
+.news p{
+    margin:0;
+}
+.social-icons .i{
+    font-size: larger; 
+    margin: 0 15px;
+  
+}
+
+.fab.fa-facebook {
+    color: #3b5998;
+}
+.fab.fa-instagram {
+    color: #c13584;
+}
+.fab.fa-youtube {
+    color: #ff0000;
+}
+.fab.fa-twitter {
+    color: #1da1f2;
+}
+
+
+
+.about-container {
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.about1 {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.about1 h1 {
+    color: #ff6347; /* Red-orange color for h1 in the .about1 div */
+}
+
+.about1 p {
+    line-height: 1.5;
+}
+
+.message {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.message h1 {
+    margin-bottom: 10px;
+    color: #ff6347; /* Red-orange color for h1 in the .message div */
+}
+
+.message h3 {
+    margin-top: 0;
+}
