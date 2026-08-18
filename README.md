@@ -8,4 +8,4 @@ login, product search, and payment integration.
 4. Payment Integration: Smooth online transactions.
 5. Favorites Management: Save preferred items for quick access.
  Responsive Design: Ensured usability across devices with Bootstrap.
- Technologies Used: HTML, CSS, JavaScript, Bootstrap, Django, MySQL.
+ Technologies Used: Python, Django, MySQL, JavaScript, Bootstrap , HTML, CSS.
